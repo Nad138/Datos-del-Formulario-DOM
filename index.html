@@ -7,17 +7,20 @@
 <body>
 
 	<form id="frm1">
-		Nombre: <input type="text" name="name" id="name"><br>
-		Mail: <input type="text" name="email" id="email"><br>
+		Nombre: <input type="text" name="name" id="name" value=""><br>
+		Mail: <input type="text" name="email" id="email" value=""><br>
 	</form>
-	<button onclick="myFunction()">Mostrar</button>
+	<button onclick="myFunction()"><strong>Mostrar</strong></button>
 
 	<p id="mostrarNombre"></p>
 	<p id="mostrarMail"></p>
 
 	<script>
 		function myFunction() {
-
+      var nombre = document.getElementById('name').value;
+      var correo = document.getElementById('email').value;
+      document.getElementById('mostrarNombre').innerHTML = "<strong>Nombre ingresado: </strong>" + nombre;
+      document.getElementById('mostrarMail').innerHTML = "<strong>Mail ingresado: </strong>" + correo;
 		}
 	</script>
 </body>
